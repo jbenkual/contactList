@@ -20,4 +20,15 @@ router.post('/', function(req, res, next) {
   })
 });
 
+router.post('/delete', function(req, res, next) {
+  console.log(req.body)
+  db.removeContact(req.body.id);
+  res.send(200);
+});
+
+router.post('/update', function(req, res, next) {
+  db.updateContact(req.body, function(data) {
+    res.send(data);
+  })
+});
 module.exports = router;

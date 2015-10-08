@@ -47,7 +47,7 @@ exports.loadContacts = function(cb) {
 };
 
 exports.removeContact = function(id) {
-  console.log(id);
+  console.log("delete", id);
   Contact.findById(id).remove( function(err, status) {
     if(err) {
       console.error(err);
@@ -55,7 +55,9 @@ exports.removeContact = function(id) {
   });
 };
 
-exports.updateContact = function(id, key, value, cb) {
-  
+exports.updateContact = function(id, data, cb) {
+  Contact.findByIdAndUpdate(id, data, function(err, contact){
+    cb(contact);
+  })
 };
 
