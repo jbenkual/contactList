@@ -4,9 +4,12 @@ var db = require("../db");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  db.getContacts(function(contacts) {
+  console.log("hey!")
+  db.loadContacts(function(contacts) {
+    console.log("whoat!", contacts)
     res.send(contacts);
   })
+  console.log("sucks!")
   
 });
 

@@ -16,7 +16,8 @@ var contactSchema = mongoose.Schema({
 var Contact = mongoose.model('contact', contactSchema);
 
 exports.createContact = function(data) {
-  var newContact = new Pet({ 
+  console.log(data);
+  var newContact = new Contact({ 
     name: data.name,
     email: data.email,
     phone: data.phone
