@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Adopt-A-Pet</title>
+  <link rel="stylesheet" type="text/css" href="./bower_components/foundation/css/foundation.min.css">
+  <link rel="stylesheet" type="text/css" href="./bower_components/foundation/css/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body ng-app="contacts">
+  <div class="row"></div>
+    <div class="small-10 large-10 small-offset-1 large-offset-1  columns">
+      <h1 class="title text-center">Welcome to Contact Manager!</h1>
+      <div ui-view></div>
+    </div>
+  </div>
+  
+  <script src="./bower_components/foundation/js/vendor/jquery.js"></script>
+  <script src="./bower_components/foundation/js/vendor/modernizr.js"></script>
+  <script src="./bower_components/foundation/js/foundation.js"></script>
+  <script src="./bower_components/angular/angular.js"></script>
+  <script src="./bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
+
+  <script src="./main.js"></script>
+   <script src="./services/contactService.js"></script>
+  <script src="./controllers/homeCtrl.js"></script>
+
+  
+</body>
+</html>
