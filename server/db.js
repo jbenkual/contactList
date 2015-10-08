@@ -7,13 +7,13 @@ db.once('open', function (callback) {
   console.log("Connected to database");
 });
 
-var contactSchema = Mongoose.Schema({
+var contactSchema = mongoose.Schema({
   name: String,
   email: String,
   phone: String
 });
 
-var Contact = Mongoose.model('contact', contactSchema);
+var Contact = mongoose.model('contact', contactSchema);
 
 exports.createContact = function(data) {
   var newContact = new Pet({ 
