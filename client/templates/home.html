@@ -1,0 +1,37 @@
+
+<div class="row">
+  <div class="medium-3 columns">
+    <input placeholder="John Doe" ng-model="data.name"></input>
+  </div>
+  <div class="medium-3 columns">
+    <input placeholder="(xxx) xxx-xxxx" ng-model="data.phone"></input>
+  </div>
+  <div class="medium-3 columns">
+    <input placeholder="johndoe@email.com" ng-model="data.email"></input>
+  </div>
+  <div class="medium-3 columns" ng-hide="edit">
+    <button class="button small" ng-click="addContact(data)">Add contact</button>
+  </div>
+  <div class="medium-3 columns" ng-show="edit">
+    <button class="button small" ng-click="addContact(data)">Add contact</button>
+  </div>
+</div>
+
+
+<div class="row" ng-repeat="contact in contactList track by $index">
+  <div class="medium-3 columns">
+    <span ng-model="contact.name">{{contact.name}}</input>
+  </div>
+  <div class="medium-3 columns">
+    <span ng-model="contact.phone">{{contact.phone}}</input>
+  </div>
+  <div class="medium-3 columns">
+    <span ng-model="contact.email">{{contact.email}}</input>
+  </div>
+  <div class="medium-3 columns">
+    <button class="button tiny" ng-click="editContact($index)">Edit</button>
+    <button class="button alert tiny" ng-click="deleteContact(data)">X</button>
+  </div>
+</div>
+
+
