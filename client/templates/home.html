@@ -13,7 +13,7 @@
     <button class="button small" ng-click="addContact(data)">Add contact</button>
   </div>
   <div class="medium-3 columns" ng-show="edit">
-    <button class="button small" ng-click="addContact(data)">Add contact</button>
+    <button class="button small" ng-click="saveContact(data.id)">Save contact</button>
   </div>
 </div>
 
@@ -29,8 +29,8 @@
     <span ng-model="contact.email">{{contact.email}}</input>
   </div>
   <div class="medium-3 columns">
-    <button class="button tiny" ng-click="editContact($index)">Edit</button>
-    <button class="button alert tiny" ng-click="deleteContact(data)">X</button>
+    <button class="button tiny" ng-click="editContact(contact)">Edit</button>
+    <button class="button alert tiny" ng-click="removeContact(contact.id)">X</button>
   </div>
 </div>
 
